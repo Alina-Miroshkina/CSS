@@ -1,3 +1,12 @@
+.container {
+	width: 100%;
+	height: 320px;
+	display: flex;
+	flex-direction: 
+column-reverse
+;
+}
+https://doka.guide/css/flexbox-guide/
 Свойство flex-wrap в CSS используется для управления переносом элементов внутри Flexbox-контейнера. Оно определяет, будут ли элементы переноситься на новую строку, если они не помещаются в контейнер по основной оси.
 
 Значения flex-wrap:
