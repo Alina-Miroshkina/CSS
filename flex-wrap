@@ -1,0 +1,59 @@
+Свойство flex-wrap в CSS используется для управления переносом элементов внутри Flexbox-контейнера. Оно определяет, будут ли элементы переноситься на новую строку, если они не помещаются в контейнер по основной оси.
+
+Значения flex-wrap:
+nowrap (значение по умолчанию):
+
+Элементы не переносятся на новую строку. Все элементы будут пытаться уместиться в одной строке, даже если это приведёт к переполнению контейнера.
+wrap:
+
+Элементы переносятся на новую строку, если они не помещаются в контейнер по основной оси. Это позволяет создавать многострочные макеты.
+wrap-reverse:
+
+Элементы переносятся на новую строку в обратном порядке. Это значит, что новые строки будут заполняться снизу вверх.
+Пример использования:
+Copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html>
+Copy
+.container {
+    display: flex;
+    flex-wrap: wrap; /* или nowrap, wrap-reverse */
+    width: 300px; /* Ограничение ширины для демонстрации переноса */
+    border: 1px solid #ccc;
+}
+
+.item {
+    flex: 1 1 100px; /* Минимальная ширина 100px */
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+Объяснение:
+HTML:
+
+Создаём контейнер <div class="container">, содержащий несколько элементов <div class="item">.
+CSS:
+
+Устанавливаем display: flex для контейнера, чтобы включить Flexbox.
+Используем flex-wrap: wrap, чтобы элементы переносились на новую строку, если они не помещаются в контейнер.
+Ограничиваем ширину контейнера, чтобы продемонстрировать перенос элементов.
+Стилизуем элементы .item, чтобы они были видимыми и имели минимальную ширину.
+Этот пример показывает, как использовать flex-wrap для управления переносом элементов в Flexbox-контейнере. Вы можете изменять значение flex-wrap и другие свойства Flexbox для достижения желаемого макета.
