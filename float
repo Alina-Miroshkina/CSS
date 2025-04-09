@@ -1,0 +1,63 @@
+Синтаксис:
+
+css
+Copy
+.element {
+  float: left;  /* или right, none */
+}
+Значения:
+
+left — элемент прижимается к левому краю, контент обтекает справа.
+
+right — элемент к правому краю, обтекание слева.
+
+none — отключает обтекание (по умолчанию).
+---------------------------------------
+.sidebar { float: left; width: 30%; }
+.content { float: right; width: 70%; }
+----------------------------------
+
+Решение 1: Clearfix
+
+css
+Copy
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;  /* Отменяет обтекание */
+}
+Добавить класс clearfix к родителю.
+
+Решение 2: display: flow-root (Современный способ)
+
+css
+Copy
+.container {
+  display: flow-root; /* Создает изолированный контекст */
+}
+3. Когда использовать?
+Для простого обтекания текста вокруг изображений.
+
+В легаси-коде.
+
+⚠️ Важно:
+Для сложных макетов используйте Flexbox или Grid — они надежнее.
+
+4. Альтернативы
+Flexbox:
+
+css
+Copy
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+Grid:
+
+css
+Copy
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+Итог
