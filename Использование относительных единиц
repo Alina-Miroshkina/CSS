@@ -1,0 +1,25 @@
+
+Пример 1. Использование относительных единиц
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Относительные единицы</title>
+  <style type="text/css">
+    .em, .ex, .px, .percent { 
+     font-family: Verdana, Arial, sans-serif; 
+    }
+   .em { font-size: 2em; }
+   .ex { font-size: 2ex; } 
+   .px { font-size: 30px; } 
+   .percent { font-size: 200%; }
+  </style>
+ </head> 
+ <body>
+  <p class="em">Размер 2 em</p> 
+  <p class="ex">Размер 2 ex</p>
+  <p class="px">Размер 30 пикселов</p>
+  <p class="percent">Размер 200%</p> 
+ </body>
+</html>
