@@ -1,0 +1,22 @@
+font-style
+
+font-weight
+
+font-size
+
+line-height
+
+font-family
+
+Синтаксис:
+css
+--------------------------------------------------------------
+element {
+  font: font-style font-weight font-size/line-height font-family;
+}
+Пример:
+css
+Copy
+p {
+  font: italic 700 16px/1.5 "Arial", sans-serif;
+}
