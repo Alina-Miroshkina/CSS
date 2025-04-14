@@ -1,0 +1,45 @@
+✔ @font-face — это CSS-правило для подключения сторонних шрифтов.
+
+Почему именно @font-face?
+Как работает:
+Позволяет загрузить файл шрифта (WOFF, WOFF2, TTF и др.) и использовать его на веб-странице:
+
+css
+Copy
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('myfont.woff2') format('woff2');
+}
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+Остальные варианты — не существуют:
+
+@font-rule — выдуманное название.
+
+@font — не существует в CSS.
+
+@fonts — не существует.
+
+Важные нюансы:
+Форматы шрифтов:
+Современные браузеры поддерживают WOFF2 (оптимальный), WOFF, TTF.
+
+css
+Copy
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto.woff2') format('woff2'),
+       url('roboto.woff') format('woff');
+}
+Лицензия: Убедитесь, что шрифт разрешён для веб-использования.
+
+Пример с Google Fonts:
+Если шрифт подключается через сервис (например, Google Fonts), они автоматически генерируют @font-face за вас:
+
+html
+Copy
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+Run HTML
+Итог:
+Для ручного подключения шрифтов всегда используйте @font-face.
