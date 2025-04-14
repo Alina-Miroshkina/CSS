@@ -1,0 +1,8 @@
+Как перечисляются функции в transform?
+В CSS-свойстве transform несколько функций перечисляются через пробел, например:
+
+css
+Copy
+.element {
+  transform: rotate(45deg) scale(1.2) translateX(10px);
+}
