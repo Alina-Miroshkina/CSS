@@ -1,0 +1,45 @@
+Сокращённое свойство background объединяет только следующие под-свойства:
+
+background-color
+
+background-image
+
+background-repeat
+
+background-attachment
+
+background-position
+
+background-size (добавляется через / после position, например: center/cover)
+
+Какие свойства не входят в background?
+background-blend-mode — определяет, как фоновые изображения/цвета смешиваются между собой.
+→ Задаётся отдельно.
+
+background-origin (границы фона)
+
+background-clip (обрезание фона)
+
+Пример:
+css
+Copy
+.element {
+  /* Сокращённый background */
+  background: url("image.jpg") no-repeat center/cover #000; 
+  
+  /* Отдельно задаётся blend-mode */
+  background-blend-mode: overlay; 
+}
+Подробнее о background:
+Если указать в сокращённой записи несуществующее для неё свойство, браузер проигнорирует его:
+
+css
+Copy
+/* Неверно: blend-mode не сработает */
+background: url("img.png") screen;  /* screen (режим наложения) будет проигнорирован */
+
+/* Верно: */
+background: url("img.png");
+background-blend-mode: screen;
+Итог:
+Из списка background-blend-mode — единственное свойство, которое нельзя задать через background.
