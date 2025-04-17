@@ -1,0 +1,78 @@
+
+Если вы имеете в виду псевдоэлемент ::after в CSS, который добавляет контент после элемента (div), то вот примеры:
+
+1. Базовый пример ::after для div
+Добавляет текст или символ после содержимого div.
+
+------------------------------------------------------
+div::after {
+  content: " ← после div";  /* Текст после div */
+  color: blue;
+  font-weight: bold;
+}
+HTML:
+
+<div>Этот div имеет текст после себя</div>
+Run HTML
+Результат:
+Этот div имеет текст после себя ← после div
+
+2. Добавление иконки или декоративного элемента
+
+div::after {
+  content: " ★";
+  color: gold;
+  font-size: 1.2em;
+}
+3. Стилизация подсказки или статуса
+
+div.completed::after {
+  content: " (Готово)";
+  color: green;
+}
+
+<div class="completed">Задача 1</div>
+
+Результат:
+Задача 1 (Готово)
+
+4. Декоративные элементы (например, разделитель)
+
+div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, red, blue);
+  margin-top: 10px;
+}
+5. Динамическое содержимое через attr()
+Можно выводить значение атрибута data-* после элемента.
+
+
+div::after {
+  content: " (" attr(data-info) ")";
+  color: gray;
+}
+HTML:
+
+<div data-info="доп. информация">Элемент</div>
+Run HTML
+Результат:
+Элемент (доп. информация)
+
+6. Очистка float с помощью ::after
+Классический метод clearfix:
+
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+HTML:
+
+<div class="clearfix">
+  <div style="float: left;">Левый блок</div>
+  <div style="float: right;">Правый блок</div>
+</div>
