@@ -1,0 +1,100 @@
+Для проекта Flashcards App в React (или другом фреймворке) в состоянии (useState, Redux, MobX и т.д.) следует хранить следующие данные:
+
+1. Основные данные для хранения:
+1.1 Коллекция карточек (массив объектов)
+javascript
+Copy
+const [cards, setCards] = useState([
+  {
+    id: 1,                 // Уникальный идентификатор
+    question: "Привет",    // Вопрос (лицевая сторона)
+    answer: "Hello",       // Ответ (обратная сторона)
+    flipped: false,        // Состояние переворота
+    category: "Базовые",   // Опционально: категория
+    difficulty: 1,         // Опционально: сложность (1-5)
+    lastReviewed: null,    // Опционально: дата последнего повторения
+  },
+  // ... другие карточки
+]);
+1.2 Форма добавления новой карточки
+javascript
+Copy
+const [newCard, setNewCard] = useState({
+  question: "",
+  answer: "",
+  category: "",    // Опционально
+});
+2. Дополнительные состояния (по необходимости):
+2.1 Фильтрация/сортировка
+javascript
+Copy
+const [filters, setFilters] = useState({
+  category: "all",     // Текущая выбранная категория
+  searchQuery: "",     // Поисковый запрос
+  sortBy: "newest",    // Сортировка (newest, oldest, difficulty)
+});
+2.2 Режимы отображения
+javascript
+Copy
+const [viewMode, setViewMode] = useState("grid"); // 'grid' или 'list'
+const [darkMode, setDarkMode] = useState(false);  // Темная тема
+2.3 Управление обучением (для Spaced Repetition)
+javascript
+Copy
+const [studySession, setStudySession] = useState({
+  active: false,       // Включен ли режим обучения
+  currentCardIndex: 0, // Текущая карточка
+  score: 0,           // Правильные ответы
+});
+3. Оптимальная структура состояния (пример для Redux/Zustand):
+javascript
+Copy
+{
+  cards: [],           // Все карточки
+  newCard: {},         // Данные формы
+  filters: {},         // Фильтры
+  ui: {                // Настройки интерфейса
+    viewMode: "grid",
+    darkMode: false,
+  },
+  study: {            // Данные для режима обучения
+    sessionActive: false,
+    currentCard: null,
+  }
+}
+4. Какие данные можно не хранить в состоянии?
+Локальные состояния компонентов (например, открыт ли попап) – лучше использовать локальный useState.
+
+Данные, которые не влияют на UI (например, метаданные для аналитики).
+
+Кэшированные данные API – лучше использовать React Query/SWR.
+
+5. Дополнительные улучшения:
+Локализация (если нужен multilingual):
+
+javascript
+Copy
+const [language, setLanguage] = useState("ru");
+Валидация форм:
+
+javascript
+Copy
+const [errors, setErrors] = useState({
+  question: "",
+  answer: "",
+});
+Анимации (если используются Framer Motion):
+
+javascript
+Copy
+const [animationControls, setAnimationControls] = useState({});
+Итог:
+Минимально необходимо хранить:
+
+Массив карточек (cards)
+
+Данные формы (newCard)
+
+Состояние переворота (flipped для каждой карточки)
+
+Остальные данные добавляются по мере усложнения функционала (категории, обучение, фильтры).
