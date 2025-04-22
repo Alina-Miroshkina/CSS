@@ -1,0 +1,12 @@
+селектор {
+	color: цвет;
+}
+Пример 
+Давайте зададим элементу красный цвет:
+
+<div id="elem">
+	Lorem ipsum dolor sit amet.
+</div>
+#elem {
+	color: red;
+}
