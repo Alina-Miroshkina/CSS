@@ -1,0 +1,8 @@
+<div id="elem">
+	Lorem ipsum dolor sit amet.
+</div>
+#elem {
+	color: red;
+	border-style: solid;
+	border-width: 2px;
+}
