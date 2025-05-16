@@ -1,0 +1,104 @@
+HTML код:
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геометрические фигуры</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="square">Квадрат</div>
+        <div class="rectangle">Прямоугольник</div>
+        <div class="circle">Круг</div>
+        <div class="oval">Овал</div>
+        <div class="triangle">Треугольник</div>
+    </div>
+</body>
+</html>
+CSS код (styles.css):
+css
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.square, .rectangle, .circle, .oval {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: #ff6b6b;
+}
+
+.rectangle {
+    width: 200px;
+    height: 150px;
+    background-color: #4ecdc4;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffbe76;
+}
+
+.oval {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #a55eea;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid #778beb;
+    position: relative;
+}
+
+.triangle::after {
+    content: "Треугольник";
+    position: absolute;
+    bottom: -130px;
+    left: -50px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+Описание фигур:
+Квадрат - создается с помощью равных width и height
+
+Прямоугольник - width больше height
+
+Круг - равные width и height + border-radius: 50%
+
+Овал - разные width и height + border-radius: 50%
+
+Треугольник - создается с помощью границ (border), где видна только одна сторона
