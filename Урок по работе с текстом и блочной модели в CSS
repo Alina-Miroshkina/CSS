@@ -1,0 +1,131 @@
+Работа с текстом
+Основные свойства текста
+css
+.text {
+  font-family: Arial, sans-serif; /* Шрифт */
+  font-size: 16px;                /* Размер */
+  font-weight: bold;             /* Толщина: normal, bold, 100-900 */
+  font-style: italic;            /* Начертание: normal, italic */
+  line-height: 1.5;              /* Межстрочный интервал (1.5 = 150%) */
+  letter-spacing: 1px;           /* Межбуквенный интервал */
+  text-transform: uppercase;     /* Регистр: uppercase, lowercase, capitalize */
+  text-decoration: underline;    /* Подчеркивание: underline, overline, line-through */
+  text-align: center;            /* Выравнивание: left, right, center, justify */
+}
+Пример оформления списка
+css
+ul.custom-list {
+  list-style-type: none;        /* Убираем стандартные маркеры */
+  padding-left: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+ul.custom-list li::before {
+  content: "•";
+  color: #ff6b6b;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+}
+Блочная модель документа
+Схема блочной модели
+  ---------------------------
+  |         margin          |
+  |  ---------------------  |
+  |  |      border       |  |
+  |  |  --------------   |  |
+  |  |  |  padding   |   |  |
+  |  |  |  -------   |   |  |
+  |  |  |  |content| |   |  |
+  |  |  |  -------   |   |  |
+  |  |  --------------   |  |
+  |  ---------------------  |
+  ---------------------------
+Свойства блочной модели
+css
+.box {
+  width: 300px;          /* Ширина контента */
+  height: 200px;         /* Высота контента */
+  padding: 20px;         /* Внутренние отступы */
+  border: 2px solid #333;/* Граница */
+  margin: 30px;          /* Внешние отступы */
+  box-sizing: border-box;/* Альтернативная модель (включает padding и border в width) */
+}
+Инструменты разработчика
+Для просмотра блочной модели:
+
+Откройте DevTools (F12)
+
+Выберите элемент
+
+Во вкладке "Computed" увидите все размеры
+
+Внизу панели - наглядное отображение margin, border, padding
+
+Дополнительные эффекты
+Изменение курсора
+css
+.button {
+  cursor: pointer; /* Варианты: pointer, help, wait, crosshair, not-allowed */
+}
+Псевдоэлементы
+css
+.element::before {
+  content: "Добавить перед";
+  color: red;
+}
+
+.element::after {
+  content: "Добавить после";
+  color: blue;
+}
+Практический пример
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .article {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .article h2 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #ff6b6b;
+      padding-bottom: 10px;
+    }
+    
+    .article p {
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+    
+    .highlight {
+      background-color: #fffacd;
+      padding: 2px 5px;
+      border-left: 3px solid #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <div class="article">
+    <h2>Заголовок статьи</h2>
+    <p>Это пример оформления текста с помощью CSS. Здесь мы видим <span class="highlight">выравнивание по ширине</span>, межстрочный интервал и другие свойства.</p>
+    <p>Второй абзац демонстрирует отступы между абзацами и оформление границ.</p>
+  </div>
+</body>
+</html>
+Этот урок охватывает основные аспекты работы с текстом и блочной моделью в CSS. Для закрепления материала рекомендуется практиковаться, изменя параметры и наблюдая результаты.
