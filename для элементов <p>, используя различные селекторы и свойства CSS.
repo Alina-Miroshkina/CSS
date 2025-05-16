@@ -1,0 +1,115 @@
+для элементов <p>, используя различные селекторы и свойства CSS. ![Image](https://github.com/user-attachments/assets/34d55958-4c29-4b70-8452-f67692aa2727)
+HTML
+Copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Учим CSS</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
+CSS
+Copy
+/* Вариант 1: Изменение цвета текста и фона */
+p:not(:nth-child(2)) {
+    color: #2759ff; /* Синий цвет текста */
+    background-color: #e6f0ff; /* Светло-синий фон */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 2: Добавление границы и скругления углов */
+p:not(:nth-child(2)) {
+    border: 2px solid #2759ff; /* Синяя граница */
+    border-radius: 5px; /* Скругление углов */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 3: Изменение шрифта и добавление тени */
+p:not(:nth-child(2)) {
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 18px; /* Размер шрифта */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень текста */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 4: Добавление анимации */
+p:not(:nth-child(2)) {
+    animation: fadeIn 1s ease-in-out; /* Анимация появления */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Вариант 5: Изменение отступов и выравнивания текста */
+p:not(:nth-child(2)) {
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 6: Добавление градиента фона */
+p:not(:nth-child(2)) {
+    background: linear-gradient(to right, #e6f0ff, #ffffff); /* Градиент фона */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 7: Изменение стиля списка (если бы это были элементы списка) */
+p:not(:nth-child(2)) {
+    list-style-type: none; /* Удаление маркеров списка */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+/* Вариант 8: Добавление эффекта при наведении */
+p:not(:nth-child(2)) {
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+
+p:not(:nth-child(2)):hover {
+    background-color: #cce0ff; /* Изменение цвета фона при наведении */
+}
+
+/* Вариант 9: Изменение стиля первого и последнего элемента */
+p:not(:nth-child(2)):first-child {
+    font-weight: bold; /* Жирный шрифт для первого элемента */
+}
+
+p:not(:nth-child(2)):last-child {
+    font-style: italic; /* Курсивный шрифт для последнего элемента */
+}
+
+/* Вариант 10: Добавление рамки и фона для четных элементов */
+p:not(:nth-child(2)):nth-child(even) {
+    background-color: #f0f8ff; /* Светло-синий фон для четных элементов */
+    border-left: 4px solid #2759ff; /* Синяя граница слева */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0; /* Отступы */
+}
+Объяснение стилей
+Селектор :not(:nth-child(2)):
+
+Используем p:not(:nth-child(2)) для выбора всех элементов <p>, кроме второго.
+Задаем различные стили для изменения внешнего вида элементов.
+Стили для второго элемента:
+
+Второй элемент <p> не будет стилизован, так как он исключен из селектора :not(:nth-child(2)).
+Эти стили помогут вам создать более привлекательные и интерактивные элементы, исключая определенные элементы из стилизации.
