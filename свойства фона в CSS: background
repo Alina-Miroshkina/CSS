@@ -1,0 +1,149 @@
+Основные свойства фона в CSS:
+background-color
+
+Устанавливает цвет фона элемента.
+
+Пример:
+
+css
+div {
+  background-color: #f0f0f0;
+}
+background-image
+
+Задает фоновое изображение.
+
+Пример:
+
+css
+div {
+  background-image: url("image.jpg");
+}
+background-repeat
+
+Определяет, будет ли фоновое изображение повторяться.
+
+Возможные значения:
+
+repeat (по умолчанию, повторяется по обоим осям)
+
+repeat-x (только по горизонтали)
+
+repeat-y (только по вертикали)
+
+no-repeat (не повторяется)
+
+Пример:
+
+css
+div {
+  background-repeat: no-repeat;
+}
+background-position
+
+Устанавливает начальное положение фонового изображения.
+
+Пример:
+
+css
+div {
+  background-position: center top;
+}
+background-size
+
+Задает размер фонового изображения.
+
+Возможные значения:
+
+auto (оригинальный размер)
+
+cover (растягивает, сохраняя пропорции, чтобы покрыть весь элемент)
+
+contain (вписывает изображение целиком, сохраняя пропорции)
+
+Пример:
+
+css
+div {
+  background-size: cover;
+}
+background-attachment
+
+Определяет, будет ли фон прокручиваться с содержимым или оставаться фиксированным.
+
+Возможные значения:
+
+scroll (фон прокручивается с элементом)
+
+fixed (фон остается на месте при прокрутке)
+
+Пример:
+
+css
+div {
+  background-attachment: fixed;
+}
+background-origin**
+
+Определяет область позиционирования фона (границы, отступы или контент).
+
+Возможные значения:
+
+border-box (фон распространяется на границу)
+
+padding-box (фон распространяется на padding, но не на границу)
+
+content-box (только внутри контента)
+
+Пример:
+
+css
+div {
+  background-origin: padding-box;
+}
+background-clip
+
+Определяет, как фон обрезается относительно границ элемента.
+
+Возможные значения:
+
+border-box (по умолчанию, фон до границы)
+
+padding-box (обрезается по padding)
+
+content-box (обрезается по контенту)
+
+Пример:
+
+css
+div {
+  background-clip: content-box;
+}
+Сокращенная запись (background)
+
+Позволяет задать все свойства в одной строке.
+
+Пример:
+
+css
+div {
+  background: #f0f0f0 url("image.jpg") no-repeat center / cover;
+}
+Примеры использования:
+1. Фон без повторения (background-repeat: no-repeat):
+css
+.element {
+  background-image: url("pattern.png");
+  background-repeat: no-repeat;
+}
+2. Фон, покрывающий весь элемент (background-size: cover):
+css
+.hero-section {
+  background: url("hero-bg.jpg") no-repeat center / cover;
+}
+3. Фиксированный фон (background-attachment: fixed):
+css
+.parallax {
+  background: url("bg.jpg") no-repeat center fixed;
+  background-size: cover;
+}
