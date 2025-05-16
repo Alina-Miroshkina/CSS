@@ -1,0 +1,273 @@
+ стили для элементов <input type="radio"> и <input type="checkbox">, а также для кнопок <button>. Мы можем использовать CSS для изменения их внешнего вида и поведения.
+
+HTML
+Copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Учим CSS</title>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="radio" id="radio1" name="radioGroup">
+            <label for="radio1">Radio 1</label>
+        </div>
+        <div>
+            <input type="radio" id="radio2" name="radioGroup">
+            <label for="radio2">Radio 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">Checkbox 1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox2">
+            <label for="checkbox2">Checkbox 2</label>
+        </div>
+        <button type="button">Button 1</button>
+        <button type="button">Button 2</button>
+    </form>
+</body>
+</html>
+CSS
+Copy
+/* Стили для радио-кнопок */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+}
+
+input[type="radio"]:checked {
+    background-color: #555;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #555;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #4CAF50; /* Зеленый фон */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #45a049; /* Темно-зеленый фон при наведении */
+}
+
+/* Стили для меток */
+label {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    margin: 20px;
+}
+Объяснение стилей
+Радио-кнопки и чекбоксы:
+
+Используем appearance: none; для удаления стандартного стиля.
+Задаем размеры, границы и радиус скругления для создания круглой формы для радио-кнопок.
+Используем псевдокласс :checked для изменения стиля при выборе.
+Кнопки:
+
+Задаем цвет фона, текст, отступы и скругление углов.
+Используем псевдокласс :hover для изменения стиля при наведении.
+Метки и форма:
+
+Задаем размер шрифта и отступы для меток.
+Используем Flexbox для расположения элементов формы.
+Эти стили помогут вам создать более привлекательные и интерактивные элементы формы.
+
+ЕЩЕ
+Давайте рассмотрим дополнительные стили для элементов <input type="radio">, <input type="checkbox"> и кнопок <button>, чтобы сделать их более привлекательными и интерактивными.
+
+HTML
+Copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Учим CSS</title>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="radio" id="radio1" name="radioGroup">
+            <label for="radio1">Radio 1</label>
+        </div>
+        <div>
+            <input type="radio" id="radio2" name="radioGroup">
+            <label for="radio2">Radio 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">Checkbox 1</label>
+        </div>
+        <div>
+            <input type="checkbox" id="checkbox2">
+            <label for="checkbox2">Checkbox 2</label>
+        </div>
+        <button type="button">Button 1</button>
+        <button type="button">Button 2</button>
+    </form>
+</body>
+</html>
+CSS
+Copy
+/* Стили для радио-кнопок */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked {
+    background-color: #555;
+}
+
+input[type="radio"]:checked + label {
+    color: #555;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #555;
+    border-color: #555;
+}
+
+input[type="checkbox"]:checked + label {
+    color: #555;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #4CAF50; /* Зеленый фон */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049; /* Темно-зеленый фон при наведении */
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #3e8e41; /* Еще более темный зеленый фон при нажатии */
+    transform: scale(0.95);
+}
+
+/* Стили для меток */
+label {
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    margin: 20px;
+}
+
+/* Стили для контейнера элементов формы */
+form div {
+    display: flex;
+    align-items: center;
+}
+Объяснение стилей
+Радио-кнопки и чекбоксы:
+
+Используем appearance: none; для удаления стандартного стиля.
+Задаем размеры, границы и радиус скругления для создания круглой формы для радио-кнопок.
+Используем псевдокласс :checked для изменения стиля при выборе.
+Добавляем переходы (transition) для плавного изменения стилей.
+Кнопки:
+
+Задаем цвет фона, текст, отступы и скругление углов.
+Используем псевдоклассы :hover и :active для изменения стиля при наведении и нажатии.
+Добавляем переходы (transition) для плавного изменения стилей.
+Метки и форма:
+
+Задаем размер шрифта и отступы для меток.
+Используем Flexbox для расположения элементов формы.
+Эти стили помогут вам создать более привлекательные и интерактивные элементы формы.
