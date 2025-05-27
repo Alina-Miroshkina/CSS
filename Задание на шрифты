@@ -1,0 +1,114 @@
+HTML
+Copy
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Styling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Настройка текста с помощью CSS</h1>
+
+        <div class="font-settings">
+            <p>Я умею настраивать шрифт, его размер и толщину.</p>
+        </div>
+
+        <div class="font-style">
+            <p>Я умею настраивать начертание шрифта и делать текст курсивным.</p>
+        </div>
+
+        <div class="line-height">
+            <p>Я умею настраивать межстрочный интервал и проверять это с помощью lorem добавив большое количество текста, чтобы появилось больше одной строки на странице. Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</p>
+        </div>
+
+        <div class="letter-spacing">
+            <p>Я умею настраивать межбуквенный интервал.</p>
+        </div>
+
+        <div class="monospace">
+            <p>Я знаю и умею делать текст моноширинным. А если не знаю, то сейчас почитаю в интернете, что такое моноширинный текст и узнаю как его делать на CSS, а после этого вернусь к заданию и сделаю моноширинный текст.</p>
+        </div>
+
+        <div class="text-align">
+            <p>Я умею выравнивать текст по ширине, по центру, по левой и правой стороне. В данном примере я демонстрирую выравнивание по правой стороне.</p>
+        </div>
+
+        <div class="text-decoration">
+            <p>Я умею делать перечеркнутый текст, настраивать подчеркивание сверху и снизу.</p>
+        </div>
+
+        <div class="text-transform">
+            <p>Я умею менять регистр символов разными способами. В данном примере весь текст в верхнем регистре, но я не кричу, а полностью сохраняю спокойствие.</p>
+        </div>
+
+        <div class="list-style">
+            <h2>Я умею делать другие маркеры у списка</h2>
+            <ul>
+                <li>Элемент списка 1</li>
+                <li>Элемент списка 2</li>
+                <li>Элемент списка 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+-----
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.font-settings {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.font-style {
+    font-style: italic;
+}
+
+.line-height {
+    line-height: 2.5;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.text-align {
+    text-align: right;
+}
+
+.text-decoration {
+    text-decoration: line-through;
+    text-decoration: overline;
+    text-decoration: underline;
+}
+
+.text-transform {
+    text-transform: uppercase;
+}
+
+.list-style ul {
+    list-style-type: square;
+}
