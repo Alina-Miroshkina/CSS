@@ -1,0 +1,53 @@
+Слайдер (Карусель)
+Слайдер или карусель в Materialize CSS позволяет создавать слайд-шоу изображений. Вот пример, как создать и инициализировать слайдер:
+
+Copy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <!-- Подключение Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <!-- Slider -->
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="https://loremflickr.com/580/250/dog" alt="Slide 1">
+                <div class="caption center-align">
+                    <h3>Slide 1</h3>
+                    <h5 class="light grey-text text-lighten-3">Description for slide 1.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://loremflickr.com/580/250/cat" alt="Slide 2">
+                <div class="caption left-align">
+                    <h3>Slide 2</h3>
+                    <h5 class="light grey-text text-lighten-3">Description for slide 2.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://loremflickr.com/580/250/paris" alt="Slide 3">
+                <div class="caption right-align">
+                    <h3>Slide 3</h3>
+                    <h5 class="light grey-text text-lighten-3">Description for slide 3.</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Подключение jQuery и Materialize JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Инициализация Slider -->
+    <script>
+        $(document).ready(function(){
+            $('.slider').slider();
+        });
+    </script>
+</body>
+</html>
