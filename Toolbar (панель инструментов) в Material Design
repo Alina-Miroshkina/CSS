@@ -1,0 +1,31 @@
+Toolbar (панель инструментов) в Material Design предоставляет удобный способ размещения часто используемых действий и функций в верхней части экрана. Вот пример кода для создания toolbar с использованием библиотеки Materialize CSS:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolbar Example</title>
+    <!-- Подключение Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Подключение иконок Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Toolbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#"><i class="material-icons left">search</i>Link with Icon</a></li>
+                <li><a href="#"><i class="material-icons left">view_module</i>Link with Icon</a></li>
+                <li><a href="#"><i class="material-icons left">refresh</i>Link with Icon</a></li>
+                <li><a href="#"><i class="material-icons left">more_vert</i>Link with Icon</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Подключение jQuery и Materialize JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
